@@ -1,6 +1,12 @@
 # travel-graph
 
-Uses googlemaps distance-matrix API to determine the location score of a specific location based on the weighted travel time to any number of locations.
+Uses googlemaps distance-matrix API to determine the location score of a specific location based on the weighted travel time to any number of locations with best guess travel time in traffic.
+
+## API Pricing
+
+### SKU: Distance Matrix Advanced
+
+With free tier ($200 credit per month) thats up to 20,000 calls at 0.01 USD / call (see https://developers.google.com/maps/billing/understanding-cost-of-use#distance-matrix-advanced).
 
 ## install
 
