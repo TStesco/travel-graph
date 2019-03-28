@@ -56,13 +56,16 @@ if __name__ == "__main__":
         d_list.append(dist_dict)
     
     # total with car
+    # add extra time on each arrival on average for parking
+    parking_factor = 60*5
     tot_with_car = (distances_df.arrival_frequency.values.transpose().dot(
-        distances_df.arrival_min_duration.values) + \
-        distances_df.return_frequency.values.transpose().dot(
-            distances_df.return_min_duration.values)) / 3600.
+        (distances_df.arrival_min_duration.values + parking_factor)) + \
+    distances_df.return_frequency.values.transpose().dot(
+        distances_df.return_min_duration.values)) / 3600.
     print("total travel duration with a car: %d".format(tot_with_car))
+    # total without car
     tot_no_car = (distances_df.arrival_frequency.values.transpose().dot(
         distances_df.arrival_min_duration_no_car.values) + \
-        distances_df.return_frequency.values.transpose().dot(
-            distances_df.return_min_duration_no_car.values)) / 3600.
+    distances_df.return_frequency.values.transpose().dot(
+        distances_df.return_min_duration_no_car.values)) / 3600.
     print("total travel duration without a car: %d".format(tot_no_car))
