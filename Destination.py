@@ -12,10 +12,12 @@ class Destination:
         self.address = address
         self.arrival_datetime = arrival_datetime
         self.arrival_frequency = arrival_frequency
+        self.arrival_distance_by = {m: 0 for m in modes}
+        self.arrival_duration_by = {m: 0 for m in modes}
         self.return_datetime = return_datetime
         self.return_frequency = return_frequency
-        self.distance_by = {m: 0 for m in modes}
-        self.duration_by = {m: 0 for m in modes}
+        self.return_distance_by = {m: 0 for m in modes}
+        self.return_duration_by = {m: 0 for m in modes}
 
     @property
     def pref_mode(self):
