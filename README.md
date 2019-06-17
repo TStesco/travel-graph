@@ -1,5 +1,7 @@
 # travel-graph
 
+[![CircleCI](https://circleci.com/gh/TStesco/travel-graph.svg?style=svg)](https://circleci.com/gh/TStesco/travel-graph)
+
 Uses googlemaps distance-matrix API to determine the location score of a specific location based on the weighted travel time to any number of locations with best guess travel time in traffic.
 
 
