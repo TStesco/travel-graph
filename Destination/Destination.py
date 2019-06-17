@@ -8,6 +8,7 @@ class Destination:
 
     :param: duration_by: dict with keys of transportation modes of durations from origin in seconds (s)
     :type: dict
+    
     """
     def __init__(self, address, arrival_datetime, arrival_frequency, return_datetime, return_frequency, modes):
         self.address = address
