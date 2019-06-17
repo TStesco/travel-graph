@@ -2,3 +2,5 @@ private.py
 __pycache__/*
 .ipynb_checkpoints/*
 *.ipynb
+.pytest_cache/*
+travelgraph.egg-info/*
