@@ -22,4 +22,5 @@ jobs: # A basic unit of work in a run
             - "/usr/local/lib/python3.7/site-packages"
       - run:
           command: |
+            export GMAPS_API_KEY=$GMAPS_API_KEY
             pipenv run pytest
